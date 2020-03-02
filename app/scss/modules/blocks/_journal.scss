@@ -116,6 +116,7 @@
     }
 
     &__discription {
+        position: relative;
         flex-basis: 50%;
         order: 1;
         padding: 44px 23px 0 26px;
@@ -123,6 +124,41 @@
 
         @media screen and (max-width: 1000px) {
             padding-top: 22px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            border: 10px solid transparent;
+
+            @media screen and (max-width: 767px) {
+                content: none;
+            }
+        }
+
+        &_1 {
+            &::before {
+                border-right-color: #fff;
+                top: 50px;
+                left: -20px;
+            }
+        }
+
+        &_2 {
+            &::before {
+                border-left-color: #fff;
+                top: 50px;
+                right: -20px;
+            }
+        }
+
+        &_3 {
+            &::before {
+                border-bottom-color: #fff;
+                top: -20px;
+                left: 50px;
+            }
         }
     }
 

@@ -17,7 +17,7 @@
                 <div class="jornal-block">
                     <div class="jornal-block__item">
                         <div class="jornal-block__img jornal-block__img_1"></div>
-                        <div class="jornal-block__discription">
+                        <div class="jornal-block__discription jornal-block__discription_1">
                             <h3 class="title jornal-block__title">Love</h3>
                             <h4 class="title jornal-block__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</h4>
                             <p class="text jornal-block__text">You know how to make best coffee in the universe? Or, maybe you’re very good in designing gloves? Tell everyone about your experience and skills.</p>
@@ -26,7 +26,7 @@
                     </div>
                     <div class="jornal-block__item">
                         <div class="jornal-block__img jornal-block__img_2 jornal-block__img_revers"></div>
-                        <div class="jornal-block__discription">
+                        <div class="jornal-block__discription jornal-block__discription_2">
                             <h3 class="title jornal-block__title">Tree</h3>
                             <h4 class="title jornal-block__subtitle jornal-block__subtitle_align_2">Lorem ipsum dolor sit amet, <span class="jornal-block__though">consectetur</span> adipisicing elit,</h4>
                             <p class="text jornal-block__text">The way to a successful brand is hard, but always very interesting. Share the full story of your project – from the very first day until now.</p>
@@ -35,7 +35,7 @@
                     </div>
                     <div class="jornal-block__item jornal-block__item_vertical">
                         <div class="jornal-block__img jornal-block__img_3"></div>
-                        <div class="jornal-block__discription">
+                        <div class="jornal-block__discription jornal-block__discription_3">
                             <h3 class="title jornal-block__title">Watter</h3>
                             <h4 class="title jornal-block__subtitle jornal-block__subtitle_align_3">Little Pieces of our proundness</h4>
                             <p class="text jornal-block__text">What do you do better than your competitors? What are you proud of? What details and advantages of your product you want people to know about?</p>
@@ -206,7 +206,7 @@
                     <fieldset class="form-reg__field">
                         <legend class="title form-reg__title">Contacts</legend>
                         <div class="form-reg__block">
-                            <p class="form-reg__text">Sign up for our newsletter to receive updates</p><input class="form-reg__input" type="text" name="user-name" placeholder="Name" pattern="[A-Za-zА-Яа-яЁё]{1,15}" title="Поле может содержать только английские и русские буквы" id="name_reg"><input class="form-reg__input" type="tel" name="user-phone" placeholder="Phone" pattern="[0-9]{3} [0-9]{3} [0-9]{2}-[0-9]{2}" title="Поле может содержать только номер телефона вида 999 666 33-22" id="phone_reg"><input class="form-reg__input" type="email" name="user-email" placeholder="E-mail" pattern="S+@[a-z]+.[a-z]+" title="Поле может содержать только email" id="email_reg"><button class="form-reg__btn" type="submit">Send</button>
+                            <p class="form-reg__text">Sign up for our newsletter to receive updates</p><input class="form-reg__input" type="text" name="user-name" placeholder="Name" required pattern="[A-Za-zА-Яа-яЁё]{1,15}" title="Поле может содержать только английские и русские буквы" id="name_reg"><input class="form-reg__input" type="tel" name="user-phone" placeholder="Phone" required pattern="+7s?[(]{0,1}9[0-9]{2}[)]{0,1}s?d{3}[-]{0,1}d{2}[-]{0,1}d{2}" title="Поле может содержать только номер телефона. Пример: +380(93)-000-00-00" id="phone_reg"><input class="form-reg__input" type="email" name="user-email" placeholder="E-mail" required pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" title="Поле может содержать только email. Пример: text@text.ru" id="email_reg"><button class="form-reg__btn" type="submit">Send</button>
                         </div>
                     </fieldset>
                 </form>

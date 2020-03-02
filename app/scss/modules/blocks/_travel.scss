@@ -58,6 +58,12 @@
         justify-content: space-between;
         @include bg;
         color: $colorLight;
+        cursor: pointer;
+        transition: 0.3s 0.1s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
 
         @media screen and (max-width: 767px) {
             width: 150px;

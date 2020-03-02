@@ -5,7 +5,7 @@ section.form.content__form
 				legend.title.form-reg__title Contacts
 				.form-reg__block
 					p.form-reg__text Sign up for our newsletter to receive updates
-					input(type="text" name="user-name" placeholder="Name" pattern="[A-Za-zА-Яа-яЁё]{1,15}" title="Поле может содержать только английские и русские буквы")#name_reg.form-reg__input
-					input(type="tel" name="user-phone" placeholder="Phone" pattern="[0-9]{3} [0-9]{3} [0-9]{2}-[0-9]{2}" title="Поле может содержать только номер телефона вида 999 666 33-22")#phone_reg.form-reg__input
-					input(type="email" name="user-email" placeholder="E-mail" pattern="\S+@[a-z]+.[a-z]+" title="Поле может содержать только email")#email_reg.form-reg__input
+					input(type="text" name="user-name" placeholder="Name" required pattern="[A-Za-zА-Яа-яЁё]{1,15}" title="Поле может содержать только английские и русские буквы")#name_reg.form-reg__input
+					input(type="tel" name="user-phone" placeholder="Phone" required pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" title="Поле может содержать только номер телефона. Пример: +380(93)-000-00-00")#phone_reg.form-reg__input
+					input(type="email" name="user-email" placeholder="E-mail" required pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" title="Поле может содержать только email. Пример: text@text.ru")#email_reg.form-reg__input
 					button(type="submit").form-reg__btn Send
