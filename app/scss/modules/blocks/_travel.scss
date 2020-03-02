@@ -1,0 +1,169 @@
+.travel {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 116px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: -27px;
+        @include bg;
+        background-image: url("../img/travel/worldmap-dots.png");
+        width: em(1469, 16);
+        height: em(733, 16);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 28.4%;
+        left: 50%;
+        transform: translateX(-50%);
+        @include bg;
+        background-image: url("../img/travel/travel-fon.png");
+        width: 1920px;
+        height: 802px;
+    }
+
+    &__title {
+        margin-bottom: 89px;
+
+        @media screen and (max-width: 1000px) {
+            margin-bottom: 44px;
+        }
+    }
+}
+
+.travel-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1000px) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__item {
+        width: em(200, 16);
+        height: em(382, 16);
+        margin: 0 15px 30px;
+        padding: 15px 10px 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include bg;
+        color: $colorLight;
+
+        @media screen and (max-width: 767px) {
+            width: 150px;
+            height: 286px;
+        }
+
+        @media screen and (max-width: 567px) {
+            width: 125px;
+            height: 240px;
+            padding: 10px 10px 0;
+        }
+
+        &_carpathian {
+            background-image: url("../img/travel/ticket/travel-carpathian.jpg");
+        }
+
+        &_alps {
+            background-image: url("../img/travel/ticket/travel-alps.jpg");
+        }
+
+        &_pyrenees {
+            background-image: url("../img/travel/ticket/travel-pyrenees.jpg");
+        }
+
+        &_rocky {
+            background-image: url("../img/travel/ticket/travel-rocky.jpg");
+        }
+
+        &_kavkaz {
+            background-image: url("../img/travel/ticket/travel-kavkaz.jpg");
+        }
+    }
+
+    &__rating {
+        display: flex;
+        margin-bottom: auto;
+    }
+
+    &__star {
+        width: 16px;
+        height: 16px;
+        margin: 0 2px;
+        @include bg;
+        background-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%20-10%20511.99143%20511%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%09%3Cpath%20fill%3D%22%23fff%22%20d%3D%22m510.652344%20185.882812c-3.371094-10.367187-12.566406-17.707031-23.402344-18.6875l-147.796875-13.417968-58.410156-136.75c-4.3125-10.046875-14.125-16.53125-25.046875-16.53125s-20.738282%206.484375-25.023438%2016.53125l-58.410156%20136.75-147.820312%2013.417968c-10.835938%201-20.011719%208.339844-23.402344%2018.6875-3.371094%2010.367188-.257813%2021.738282%207.9375%2028.925782l111.722656%2097.964844-32.941406%20145.085937c-2.410156%2010.667969%201.730468%2021.699219%2010.582031%2028.097656%204.757813%203.457031%2010.347656%205.183594%2015.957031%205.183594%204.820313%200%209.644532-1.28125%2013.953125-3.859375l127.445313-76.203125%20127.421875%2076.203125c9.347656%205.585938%2021.101562%205.074219%2029.933593-1.324219%208.851563-6.398437%2012.992188-17.429687%2010.582032-28.097656l-32.941406-145.085937%20111.722656-97.964844c8.191406-7.1875%2011.308594-18.535156%207.9375-28.925782zm-252.203125%20223.722657%22%2F%3E%0A%3C%2Fsvg%3E");
+        @media screen and (max-width: 567px) {
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    &__title {
+        font-size: em(28, 16);
+        line-height: em(62, 28);
+        margin: 35px 0 0px;
+        letter-spacing: -1.5px;
+        text-transform: capitalize;
+
+        @media screen and (max-width: 567px) {
+            font-size: 14px;
+        }
+    }
+
+    &__text {
+        margin-bottom: auto;
+        font-size: 16px;
+        line-height: 22px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        @media screen and (max-width: 567px) {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: em(64, 16);
+    }
+
+    &__price {
+        font-size: em(26, 16);
+        line-height: em(32, 26);
+        font-weight: 800;
+        @media screen and (max-width: 767px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &_old {
+            font-size: em(18, 16);
+            line-height: em(22, 18);
+            font-weight: 500;
+            padding-top: 5px;
+            text-decoration: line-through;
+
+            @media screen and (max-width: 767px) {
+                font-size: 12px;
+                line-height: 18px;
+                padding-top: 3px;
+            }
+        }
+    }
+}

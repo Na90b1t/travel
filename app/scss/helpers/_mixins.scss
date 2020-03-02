@@ -1,0 +1,47 @@
+@mixin bg {
+    background: no-repeat center / contain;
+}
+
+@mixin abs-cen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin hack-ie {
+    *::-ms-backdrop,
+    & {
+        @content;
+    }
+}
+
+@mixin hack-ff {
+    @supports (-moz-appearance: meterbar) and
+        (background-blend-mode: difference, normal) {
+        & {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+extends pug/layout/main
+
+block variables
+	- var pageTitle = 'Главная страница'
+
+	- var travelStar = 5
+	- var travelText = 'Lorem ipsum dolor si amet, consectetur'
+
+	- var workTitle = 'Lorem ipsum dolor sit'
+	- var workText = 'amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt'
+
+	-
+		var work = [
+				{title: `${workTitle}`, text: `${workText}`, icon: 'doc'},
+				{title: `${workTitle}`, text: `${workText}`, icon: 'user'},
+				{title: `${workTitle}`, text: `${workText}`, icon: 'book'},
+				{title: `${workTitle}`, text: `${workText}`, icon: 'choice'},
+			]
+
+	-
+		var travels = [
+				{title:'carpathian', priceOld:'$300', price:'$793'},
+				{title:'alps', priceOld:'$3150', price:'$1893'},
+				{title:'pyrenees', priceOld:'$3150', price:'$2593'},
+				{title:'rocky', priceOld:'$3150', price:'$2123'},
+				{title:'kavkaz', priceOld:'$3150', price:'$593'},
+			]
+
+block content
+	include pug/modules/blocks/journal
+	include pug/modules/blocks/work
+	include pug/modules/blocks/travel
+	include pug/modules/blocks/gallery
+	include pug/modules/blocks/brands
+	include pug/modules/blocks/comments
+	include pug/modules/blocks/form
+
+block footer
+	include pug/modules/common/footer
+
+block scripts
+	script(src="js/common.js")
+
+block styles
+	link(rel="stylesheet" href="css/main.css")

@@ -1,0 +1,137 @@
+.form {
+    position: relative;
+    &::before {
+        content: "";
+        @include abs-cen;
+        border-radius: 10px;
+        z-index: -1;
+        width: 100%;
+        max-width: 514px;
+        height: 496px;
+        margin-top: 20px;
+        background: url("../img/form/form-fon.png") no-repeat center / cover;
+
+        @media screen and (max-width: 567px) {
+            height: 396px;
+        }
+    }
+
+    &__reg {
+        display: flex;
+        justify-content: center;
+        padding: em(25 28 0, 16);
+        margin: 0 auto;
+    }
+}
+
+.form-reg {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 514px;
+
+    @media screen and (max-width: 1000px) {
+        margin-bottom: 33px;
+    }
+
+    &__field {
+        border: 0;
+        padding: 0;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 36px;
+        color: $colorBright;
+        letter-spacing: 3.6px;
+        margin-bottom: 1px;
+
+        @include hack-ff {
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 567px) {
+            font-size: 28px;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 29px;
+        color: #383e4a;
+
+        @media screen and (max-width: 567px) {
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__input,
+    &__btn {
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        &:focus {
+            box-shadow: 0px 0px 0 2px #a3c5fb;
+        }
+    }
+
+    &__input {
+        font-family: "Roboto";
+        font-size: 18px;
+        line-height: 24px;
+        width: 100%;
+        padding: 18px 19px;
+        margin-bottom: 19px;
+        background-color: #fff;
+        @include placeholder {
+            color: $colorText;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        @media screen and (max-width: 567px) {
+            font-size: 14px;
+            padding: 10px 19px;
+            margin-bottom: 14px;
+            @include placeholder {
+                font-size: 14px;
+            }
+        }
+
+        &:invalid {
+            box-shadow: 0px 0px 0 2px red;
+        }
+    }
+
+    &__btn {
+        justify-content: center;
+        width: 100%;
+        height: 70px;
+        background-color: #4985ff;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 700;
+        color: #fff;
+        margin-top: 3px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 2px;
+
+        @media screen and (max-width: 567px) {
+            height: 44px;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.comments {
+    &__title {
+        margin-bottom: 114px;
+
+        @media screen and (max-width: 1000px) {
+            margin-bottom: 58px;
+        }
+    }
+}
+
+.comments-block {
+    display: flex;
+
+    &__item {
+        position: relative;
+        padding-left: 13px;
+        margin: 0 15px;
+
+        @media screen and (max-width: 567px) {
+            padding-left: 0;
+        }
+
+        &::before {
+            content: " “ ";
+            position: absolute;
+            top: -11px;
+            left: 10px;
+            font-family: "League-Gothic";
+            font-size: 92px;
+            line-height: 33px;
+            color: #758697;
+
+            @media screen and (max-width: 567px) {
+                font-size: 60px;
+            }
+        }
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 567px) {
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 33px;
+        color: #bcbcbc;
+        margin-bottom: 22px;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        @media screen and (max-width: 567px) {
+            font-size: 14px;
+            line-height: 24px;
+            color: $colorText;
+        }
+    }
+
+    &__avatar {
+        margin-right: 20px;
+        border-radius: 50%;
+    }
+
+    &__signature {
+        color: $colorBright;
+        font-size: 16px;
+        line-height: 33px;
+        font-weight: 700;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        @media screen and (max-width: 567px) {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+
+    &__signature-prof {
+        font-weight: 300;
+        letter-spacing: -0.3px;
+    }
+}

@@ -1,0 +1,195 @@
+.jornal {
+    // display: none;
+    &__title {
+        margin-bottom: 69px;
+
+        @media screen and (max-width: 1000px) {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.jornal-block {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 760px;
+
+    @media screen and (max-width: 1200px) {
+        max-height: 100%;
+    }
+
+    &__item {
+        display: flex;
+        width: $widthContent / 3 * 2;
+        height: em(380, 16);
+        @media screen and (max-width: 1200px) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 1000px) {
+            height: auto;
+        }
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            height: 100%;
+        }
+
+        &_vertical {
+            width: $widthContent / 3;
+            height: 760px;
+            flex-direction: column;
+            transform: translateY(-380px);
+
+            @media screen and (max-width: 1200px) {
+                flex-direction: row;
+                width: 100%;
+                height: em(380, 16);
+                transform: none;
+            }
+
+            @media screen and (max-width: 1000px) {
+                height: auto;
+            }
+
+            @media screen and (max-width: 767px) {
+                flex-direction: column;
+                height: 100%;
+            }
+        }
+    }
+
+    &__img {
+        @include flex-center;
+        flex: 1 0 50%;
+        height: 100%;
+        order: 1;
+        background: no-repeat center / cover;
+
+        @media screen and (max-width: 767px) {
+            min-height: 200px;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            @include bg;
+        }
+
+        &_1 {
+            background-image: url("../img/journal/fons/layer_50.jpg");
+
+            &::before {
+                width: 81px;
+                height: 81px;
+                background-image: url("../img/journal/icons/love.png");
+            }
+        }
+
+        &_2 {
+            background-image: url("../img/journal/fons/layer_48.jpg");
+
+            &::before {
+                width: 65px;
+                height: 65px;
+                background-image: url("../img/journal/icons/sheet.png");
+            }
+        }
+
+        &_3 {
+            background-image: url("../img/journal/fons/layer_49.jpg");
+
+            &::before {
+                width: 59px;
+                height: 74px;
+                background-image: url("../img/journal/icons/watter.png");
+            }
+        }
+
+        &_revers {
+            order: 2;
+
+            @media screen and (max-width: 767px) {
+                order: 1;
+            }
+        }
+    }
+
+    &__discription {
+        flex-basis: 50%;
+        order: 1;
+        padding: 44px 23px 0 26px;
+        box-shadow: 0 4px 15px -4px #c6c6c6;
+
+        @media screen and (max-width: 1000px) {
+            padding-top: 22px;
+        }
+    }
+
+    &__title {
+        font-size: 11px;
+        line-height: 13px;
+        color: $colorBright;
+        letter-spacing: 1.5px;
+        margin-bottom: 49px;
+
+        @media screen and (max-width: 1100px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 17px;
+        min-height: 72px;
+        font-size: 16.15px;
+        line-height: 24px;
+        letter-spacing: 2.5px;
+
+        @media screen and (max-width: 567px) {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        &_align_2 {
+            padding: 0 20px;
+            margin-left: 3px;
+            letter-spacing: 2.3px;
+        }
+
+        &_align_3 {
+            padding: 0 60px;
+            margin-left: 4px;
+        }
+    }
+
+    &__though {
+        text-decoration: line-through;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 23px;
+        padding: 0 30px;
+        text-align: center;
+        margin-bottom: 33px;
+        min-height: 92px;
+
+        @media screen and (max-width: 1100px) {
+            margin-bottom: 16px;
+        }
+
+        @media screen and (max-width: 567px) {
+            min-height: auto;
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+
+    &__num {
+        font-family: initial;
+        font-style: italic;
+        line-height: 17.1px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}

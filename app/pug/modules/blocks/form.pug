@@ -1,0 +1,11 @@
+section.form.content__form
+	.l-content
+		form(action="#" method="get").form-reg.form__reg
+			fieldset.form-reg__field
+				legend.title.form-reg__title Contacts
+				.form-reg__block
+					p.form-reg__text Sign up for our newsletter to receive updates
+					input(type="text" name="user-name" placeholder="Name" pattern="[A-Za-zА-Яа-яЁё]{1,15}" title="Поле может содержать только английские и русские буквы")#name_reg.form-reg__input
+					input(type="tel" name="user-phone" placeholder="Phone" pattern="[0-9]{3} [0-9]{3} [0-9]{2}-[0-9]{2}" title="Поле может содержать только номер телефона вида 999 666 33-22")#phone_reg.form-reg__input
+					input(type="email" name="user-email" placeholder="E-mail" pattern="\S+@[a-z]+.[a-z]+" title="Поле может содержать только email")#email_reg.form-reg__input
+					button(type="submit").form-reg__btn Send

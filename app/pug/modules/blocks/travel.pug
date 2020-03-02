@@ -1,0 +1,15 @@
+section.travel.content__travel
+	.l-content
+		h1.title.title_wavy.travel__title Travel with us
+		.travel-block.l-wrap
+			each item in travels
+				div(class="travel-block__item travel-block__item_" + `${item.title}`)
+					.travel-block__rating
+						- for (var i = 0; i < travelStar; i++) {
+							.travel-block__star
+						- }
+					h4.travel-block__title= item.title
+					p.travel-block__text= travelText
+					.travel-block__footer
+						p.travel-block__price.travel-block__price_old= item.priceOld
+						p.travel-block__price= item.price

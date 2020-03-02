@@ -1,0 +1,11 @@
+section.work.content__work
+	.l-content
+		h2.title.title_wavy.work__title How we work
+		.work-block.l-wrap
+			each item in work
+				.work-block__item
+					.work-block__count
+					.work-block__elem
+						div(class="work-block__figure work-block__figure_" + `${item.icon}`)
+					h3.title.title_size_small.work-block__title= item.title
+					p.text.work-block__text= item.text

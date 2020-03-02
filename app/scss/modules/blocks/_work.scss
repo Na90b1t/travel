@@ -1,0 +1,231 @@
+.work {
+    &__title {
+        margin-bottom: 67px;
+
+        @media screen and (max-width: 1000px) {
+            margin-bottom: 33px;
+        }
+    }
+}
+
+.work-block {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    counter-reset: section;
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: $widthContent / 4;
+        flex-basis: 25%;
+        padding: 0 30px;
+
+        @media screen and (max-width: 1000px) {
+            padding: 0 15px;
+        }
+
+        @media screen and (max-width: 767px) {
+            flex-basis: 50%;
+            margin-bottom: 29px;
+
+            @include hack-ie {
+                flex-basis: 40%;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 24px;
+            right: 0;
+            transform: translateX(em(145, 16));
+            width: em(290, 16);
+            height: 2px;
+            background-color: #f0f3f6;
+
+            @media screen and (max-width: 767px) {
+                content: none;
+            }
+        }
+
+        &:last-child {
+            &::before {
+                content: none;
+            }
+        }
+    }
+
+    &__count {
+        position: relative;
+        z-index: 1;
+        @include flex-center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 3px solid $colorBright;
+        margin-bottom: 58px;
+        background-color: #fff;
+
+        @media screen and (max-width: 767px) {
+            width: 38px;
+            height: 38px;
+            margin-bottom: 29px;
+        }
+
+        &::before {
+            content: counter(section);
+            counter-increment: section 1;
+            color: $colorBright;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 700;
+            font-family: "Roboto";
+
+            @media screen and (max-width: 767px) {
+                font-size: 14px;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            bottom: -3px;
+            left: 50%;
+            transform: translate(-50%, 100%);
+            width: 2px;
+            height: 60px;
+            background-color: #f0f3f6;
+
+            @media screen and (max-width: 767px) {
+                height: 33px;
+            }
+        }
+    }
+    &__elem {
+        z-index: 1;
+        @include flex-center;
+        width: 180px;
+        height: 180px;
+        background-color: #f0f3f6;
+        border-radius: 50%;
+        padding-top: 8px;
+        margin-bottom: 24px;
+
+        @media screen and (max-width: 1000px) {
+            width: em(180, 13.333);
+            height: em(180, 13.333);
+        }
+
+        @media screen and (max-width: 567px) {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    &__figure {
+        width: 124px;
+        height: 134px;
+        padding-bottom: 8px;
+        @include flex-center;
+        @include bg;
+        background-image: url("../img/work/figure.png");
+
+        @media screen and (max-width: 1000px) {
+            width: em(124, 13.333);
+            height: em(134, 13.333);
+        }
+
+        @media screen and (max-width: 567px) {
+            width: 70px;
+            height: 76px;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+        }
+
+        &_doc {
+            &::before {
+                width: em(32, 16);
+                height: em(40, 16);
+                background: url("../img/work/icons/doc.png") no-repeat center /
+                    contain;
+
+                @media screen and (max-width: 767px) {
+                    width: 20px;
+                    height: 25px;
+                }
+            }
+        }
+
+        &_user {
+            &::before {
+                width: em(40, 16);
+                height: em(40, 16);
+                background: url("../img/work/icons/user.png") no-repeat center /
+                    contain;
+
+                @media screen and (max-width: 767px) {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+
+        &_book {
+            &::before {
+                width: em(38, 16);
+                height: em(38, 16);
+                background: url("../img/work/icons/book.png") no-repeat center /
+                    contain;
+
+                @media screen and (max-width: 767px) {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+
+        &_choice {
+            &::before {
+                width: em(38, 16);
+                height: em(38, 16);
+                background: url("../img/work/icons/choise.png") no-repeat center /
+                    contain;
+
+                @media screen and (max-width: 767px) {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 2px;
+    }
+
+    &__text {
+        font-family: "Roboto";
+        text-align: center;
+        letter-spacing: 0px;
+        line-height: 24px;
+        color: #949494;
+
+        @include hack-ie {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 567px) {
+            line-height: 20px;
+        }
+    }
+}
