@@ -2,5 +2,5 @@ section.brands.content__brands
 	.l-content
 		.brands-block
 			- for (var i = 0; i < 6; i++) {
-				img(src="./img/brands/brand_" + `${i}` + ".png" alt='brand' class='brands-block__img brands-block__img_' + `${i}`)
+				div(class='brands-block__img brands-block__img_' + `${i}`)
 			- }

@@ -1505,56 +1505,90 @@ p {
   height: 11.25em;
 }
 .brands-block__img {
+  background: no-repeat 0 0 / auto 100%;
+  background: url('../img/brands/sprite-brands.png') no-repeat 0 0/auto 100%;
+}
+.brands-block__img_0 {
   width: 80px;
-
-  background: no-repeat center / contain;
+  height: 24px;
+  margin-left: 1.3125em;
 }
 @media screen and (max-width: 567px) {
-  .brands-block__img {
+  .brands-block__img_0 {
     width: 40px;
+    height: 12px;
   }
 }
 .brands-block__img_1 {
   width: 38px;
+  height: 34px;
   margin-left: 1.3125em;
+
+  background-position-x: -113px;
 }
 @media screen and (max-width: 567px) {
   .brands-block__img_1 {
     width: 19px;
+    height: 17px;
+
+    background-position-x: -56.5px;
   }
 }
 .brands-block__img_2 {
   width: 80px;
+  height: 28px;
   margin-left: 1.3125em;
+
+  background-position-x: -124px;
 }
 @media screen and (max-width: 567px) {
   .brands-block__img_2 {
     width: 40px;
     height: 14px;
+
+    background-position-x: -62px;
   }
 }
 .brands-block__img_3 {
   width: 80px;
+  height: 18px;
+
+  background-position-x: -131px;
 }
 @media screen and (max-width: 567px) {
   .brands-block__img_3 {
     width: 40px;
+    height: 9px;
+
+    background-position-x: -65.5px;
   }
 }
 .brands-block__img_4 {
   width: 80px;
+  height: 24px;
+
+  background-position-x: -281px;
 }
 @media screen and (max-width: 567px) {
   .brands-block__img_4 {
     width: 40px;
+    height: 12px;
+
+    background-position-x: -140.5px;
   }
 }
 .brands-block__img_5 {
   width: 70px;
+  height: 26px;
+
+  background-position-x: -392px;
 }
 @media screen and (max-width: 567px) {
   .brands-block__img_5 {
     width: 35px;
+    height: 13px;
+
+    background-position-x: -196px;
   }
 }
 
